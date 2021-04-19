@@ -1,0 +1,164 @@
+@import "./mixin";
+
+// common CSS
+.l-center {
+  width: 90%;
+  max-width: 1286px;
+  margin: 0 auto;
+
+  @include media-custom(600px) {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+
+.mo-hide {
+  display: block;
+}
+
+.mo-show {
+  display: none;
+}
+
+// E common CSS
+
+// header
+.nf-header {
+  padding: 40px 0;
+  @include media-custom(600px) {
+    padding: 20px 0;
+  }
+
+  .hd-tit {
+    font: {
+      family: 'Inconsolata', monospace;
+      size: 1.5rem;
+      weight: 700;
+    }
+    @include media-custom(600px) {
+      font-size: 2.4rem;
+    }
+  }
+}
+// E header
+
+// main
+
+// visual
+.sec-visual {
+  padding: 160px 0 300px;
+  @include media-custom(600px) {
+    padding: 44px 0 90px; 
+  }
+  .l-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-custom(600px) {
+      display: block;
+    }
+    .img-wrap {
+      @include wh(539px, 414px);
+      @include media-custom(600px) {
+        @include wh(100%, auto);
+        margin-bottom: 77.6px;
+      }
+      .img {
+        object-fit: cover;
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+    .txt-wrap {
+      font-family: 'Space Mono', monospace;
+      .sub-tit {
+        color: #333;
+        font: {
+          weight: 700;
+          size: 4rem;          
+        }
+        margin-bottom: 36px;
+        line-height: 1.5;
+        @include media-custom(600px) {
+          font-size: 4.8rem;
+          margin-bottom: 30px;
+        }
+        @include media-custom(375px) {
+          font-size: 4.6rem;
+        }
+        @include media-custom(360px) {
+          font-size: 4.4rem;
+        }
+        @include media-custom(320px) {
+          font-size: 3.8rem;
+        }
+      }
+      .dec {
+        color: #4F4F4F;
+        font: {
+          weight: 400;
+          size: 1.5rem;
+        }
+        line-height: 1.5;
+        margin-bottom: 64px;
+        @include media-custom(600px) {
+          font-size: 1.8rem;
+          margin-bottom: 66px;
+        }
+        @include media-custom(320px) {
+          font-size: 1.6rem;
+        }
+      }
+      .btn-bthome {
+        padding: 24px 43px;
+        appearance: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font: {
+          size: 0.875rem;
+          weight: 700;
+        }
+        @include media-custom(600px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+// footer
+.nf-footer {
+  padding: 24px 0;
+  .ft-info {
+    color: #BDBDBD;
+    text-align: center;
+    font: {
+      family: 'Montserrat', sans-serif;
+      weight: 500;
+      size: 0.875rem;
+    }
+    .bold-txt {
+      font-weight: 700;
+    }
+    @include media-custom(600px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+// E footer
+
+@media all and (max-width: 600px) {
+  body, html {
+    font-size: 10px;
+  }
+
+  .mo-show {
+    display: block;
+  }
+
+  .mo-hide {
+    display: none;
+  }
+}
